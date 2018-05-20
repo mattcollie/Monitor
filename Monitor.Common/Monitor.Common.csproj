@@ -38,7 +38,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\Machine.cs" />
+    <Compile Include="Clients\Reporter.cs" />
+    <Compile Include="Interfaces\Clients\IClient.cs" />
+    <Compile Include="Interfaces\Clients\IMachine.cs" />
+    <Compile Include="Interfaces\Clients\IReporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
