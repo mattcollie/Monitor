@@ -41,6 +41,7 @@
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Clients\Machine.cs" />
     <Compile Include="Clients\Reporter.cs" />
+    <Compile Include="Enums\ClientTypes.cs" />
     <Compile Include="Interfaces\Clients\IClient.cs" />
     <Compile Include="Interfaces\Clients\IMachine.cs" />
     <Compile Include="Interfaces\Clients\IReporter.cs" />
