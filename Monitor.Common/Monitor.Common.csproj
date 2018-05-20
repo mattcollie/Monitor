@@ -44,10 +44,13 @@
     <Compile Include="Dto\EnvironmentDto.cs" />
     <Compile Include="Dto\MachineDto.cs" />
     <Compile Include="Dto\TableDto.cs" />
+    <Compile Include="Dto\TableMapDto.cs" />
+    <Compile Include="Dto\TableUpdateDto.cs" />
     <Compile Include="Enums\ClientTypes.cs" />
     <Compile Include="Interfaces\Clients\IClient.cs" />
     <Compile Include="Interfaces\Clients\IMachine.cs" />
     <Compile Include="Interfaces\Clients\IReporter.cs" />
+    <Compile Include="Interfaces\IBaseDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

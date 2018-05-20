@@ -2,7 +2,9 @@
 {
     public class TableDto
     {
+        public long MapId { get; set; }
         public string Name { get; set; }
+        public bool UnknownTable { get; set; }
         public long RowCount
         {
             get => _rowCount;
@@ -15,6 +17,6 @@
 
         private long _rowCount;
     
-        public long LastRowCount { get; set; }
+        public long LastRowCount { get; private set; }
     }
 }

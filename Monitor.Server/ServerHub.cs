@@ -33,13 +33,19 @@ namespace Monitor.Server
             client.Environment = new EnvironmentDto { Name = name };
         }
 
-        public void SetTables(IList<TableDto> tables)
+        public void SetTables(IList<TableMapDto> tables)
         {
             IMachine client = Context.GetClientByContext<IMachine>();
             client.SetTables(tables);
         }
 
-        public void UpdateRowCount(TableDto table)
+        public void UpdateTableMap(TableMapDto table)
+        {
+            IMachine client = Context.GetClientByContext<IMachine>();
+            client.UpdateTableMap(table);
+        }
+
+        public void UpdateRowCount(TableUpdateDto table)
         {
             IMachine client = Context.GetClientByContext<IMachine>();
             client.UpdateRowCount(table);

@@ -21,6 +21,7 @@ namespace Monitor.Server
             HubClients = hubClients;
         }
 
+        #region Clients
         public TClient GetClient<TClient>(string clientId) where TClient : class, IClient
         {
             if (Clients.ContainsKey(clientId)) return default(TClient);
@@ -32,8 +33,6 @@ namespace Monitor.Server
         {
             return Clients.Where(c => c.Value is TClient).Select(c => c.Value as TClient).ToList();
         }
-
-        #region Clients
         
         public void Add(string clientId)
         {

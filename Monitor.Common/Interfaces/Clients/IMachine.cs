@@ -7,8 +7,9 @@ namespace Monitor.Common.Interfaces.Clients
     {
         EnvironmentDto Environment { get; set; }
         IList<TableDto> Tables { get; }
-        void SetTables(IList<TableDto> tables);
-        TableDto GetTable(TableDto table);
-        void UpdateRowCount(TableDto table);
+        void UpdateTableMap(TableMapDto table);
+        void SetTables(IList<TableMapDto> tables);
+        TableDto GetTable(IBaseDto table);
+        void UpdateRowCount(TableUpdateDto table);
     }
 }
