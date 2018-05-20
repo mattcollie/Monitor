@@ -1,5 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
+using Monitor.Common.Dto;
 using Monitor.Common.Interfaces.Clients;
 
 namespace Monitor.Server
@@ -23,6 +25,24 @@ namespace Monitor.Server
             client.Name = name;
             
             Server.Instance.RegisterAs<IMachine>(client);
+        }
+
+        public void SetEnvironment(string name)
+        {
+            IMachine client = Context.GetClientByContext<IMachine>();
+            client.Environment = new EnvironmentDto { Name = name };
+        }
+
+        public void SetTables(IList<TableDto> tables)
+        {
+            IMachine client = Context.GetClientByContext<IMachine>();
+            client.SetTables(tables);
+        }
+
+        public void UpdateRowCount(TableDto table)
+        {
+            IMachine client = Context.GetClientByContext<IMachine>();
+            client.UpdateRowCount(table);
         }
         #endregion
         
